@@ -1,8 +1,10 @@
 # Calculator App
 
+### React calculator simple and advance calculator to help speed up calculations with variety of maths options, Almost any mathematical equation can be computed. 
+
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+To get this project up and running in your local machine, follow these simple example steps.
 
 
 ## Prerequisites 
@@ -12,7 +14,7 @@ To get a local copy up and running follow these simple example steps.
 Clone repo into your local machine by running 
 - `` git clone https://github.com/juxsalley/calculator-app.git `` ***in your terminal***
 
-open project director in terminal by `` cd calculator-app ``
+open project director in your terminal by  `` cd calculator-app ``
 
 ### install require dependecies 
 
