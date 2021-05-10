@@ -24,7 +24,6 @@
 .results-card {
   height: 100%;
   display: flex;
-  background-color: honeydew;
   flex-direction: column;
   position: relative;
 }

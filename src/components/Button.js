@@ -7,9 +7,7 @@ import './Button.css';
 class Button extends React.Component {
   render() {
     const { number, color } = this.props;
-    console.log(number);
     return (
-
       <button type="button" className={color}>
         {' '}
         {number}
