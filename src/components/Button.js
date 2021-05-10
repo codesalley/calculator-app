@@ -2,17 +2,20 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
+import './Button.css';
 
 class Button extends React.Component {
   render() {
     const { number, color } = this.props;
     console.log(number);
     return (
-      <button type="button" className={color ? 'operation-btn' : 'number-btn'}>
+
+      <button type="button" className={color}>
         {' '}
         {number}
         {' '}
       </button>
+
     );
   }
 }

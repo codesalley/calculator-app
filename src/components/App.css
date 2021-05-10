@@ -8,6 +8,7 @@
 }
 
 .main-intro {
+  overflow: scroll;
   background-color: white;
   width: 350px;
   height: 80vh;
@@ -15,12 +16,8 @@
   top: 10vh;
   border-radius: 10px;
   padding: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.buttons-field {
-  height: 70%;
-}
-
-.results-card {
-  height: 30%;
-}

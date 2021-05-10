@@ -1,42 +1,43 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import Button from './Button';
+import './ButtonPanel.css';
 
 class ButtonPanel extends React.Component {
   render() {
     return (
       <div className="buton-list">
-        <div>
+        <div className="btn-group">
           {' '}
-          <Button number="AC" color={false} />
-          <Button number="+/-" color={false} />
-          <Button number="%" color={false} />
-          <Button number="÷" color={false} />
+          <Button number="AC" color="operation-black btn" />
+          <Button number="+/-" color="operation-black btn" />
+          <Button number="%" color="operation-black btn" />
+          <Button number="÷" color="operation-yellow btn" />
           {' '}
         </div>
-        <div>
-          <Button number="7" color />
-          <Button number="8" color />
-          <Button number="9" color />
-          <Button number="X" color={false} />
+        <div className="btn-group">
+          <Button number="7" color="number-white btn" />
+          <Button number="8" color="number-white btn" />
+          <Button number="9" color="number-white btn" />
+          <Button number="X" color="operation-yellow btn" />
         </div>
-        <div>
-          <Button number="4" color />
-          <Button number="5" color />
-          <Button number="6" color />
-          <Button number="-" color="yellow" />
+        <div className="btn-group">
+          <Button number="4" color="number-white btn" />
+          <Button number="5" color="number-white btn" />
+          <Button number="6" color="number-white btn" />
+          <Button number="-" color="operation-yellow btn" />
 
         </div>
-        <div>
-          <Button number="1" color />
-          <Button number="2" color />
-          <Button number="3" color />
-          <Button number="+" color />
+        <div className="btn-group">
+          <Button number="1" color="number-white btn" />
+          <Button number="2" color="number-white btn" />
+          <Button number="3" color="number-white btn" />
+          <Button number="+" color="operation-yellow btn" />
         </div>
-        <div>
-          <Button number="0" color />
-          <Button number="." color />
-          <Button number="=" color />
+        <div className="last-group">
+          <Button number="0" color=" zero-btn" />
+          <Button number="." color=" last-btn" />
+          <Button number="=" color=" last-btn" />
 
         </div>
       </div>
