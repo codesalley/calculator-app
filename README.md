@@ -15,7 +15,7 @@
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/juxsalley/restaurant-landing-page/issues).
+Feel free to check the [issues page](https://github.com/juxsalley/calculator-react/issues).
 
 ## Show your support
 
