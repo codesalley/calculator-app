@@ -1,14 +1,80 @@
 .btn-white {
-    background-color: white;
+    border: none;
+    border-radius: 50%;
+    border-radius: 150px;
+    color: rgba(0, 0, 0, 0.753);
+    font-size: 30px;
+    font-weight: 800;
+    background: #ffffff;
+    box-shadow:  8px 8px 27px #f2f2f2,
+                 -8px -8px 27px #ffffff;;
+    
+}
+
+.btn-white:active {
+    border: none;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.753);
+    font-weight: 800;
+    border-radius: 150px;
+    background: #ffffff;
+    box-shadow: inset 4px 4px 18px #f2f2f2,
+                inset -4px -4px 18px #ffffff;
+    overflow: hidden;
     
 }
 
 .btn-yellow {
-    background-color: yellow;
+    border: none;
+    font-size: 30px;
+    font-weight: 800;
+    color: white;
+    border-radius: 150px;
+    background: linear-gradient(145deg, #e3ac42, #ffcc4e);
+    box-shadow:  1px 1px 0px #f9bd48,
+                 1px 1px 0px #ffc14a;
 
 }
 
 .btn-dark  {
-background-color: gray;
+    border: none;
+    border-radius: 150px;
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+    background: linear-gradient(145deg, #161a1d, black);
+    box-shadow:  8px 8px 22px #f2f2f2,
+                 -8px -8px 22px #ffffff;
 }
+.btn-dark:active  {
+    border: none;
+    border-radius: 150px;
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.753);
+    box-shadow:  5px 5px 10px #c9c9c9,
+                 -5px -5px 10px #ffffff;
+}
+
+.btn-last-color {
+    border: none;
+    font-size: 30px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.753);
+    background: #ffffff;
+    box-shadow:  8px 8px 27px #f2f2f2,
+                 -8px -8px 27px #ffffff;;
+}
+.btn-last-color:active {
+    border: none;
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.753);
+    font-weight: 800;
+    background: #ffffff;
+    box-shadow: inset 4px 4px 18px #f2f2f2,
+                inset -4px -4px 18px #ffffff;
+    overflow: hidden;
+}
+
 
