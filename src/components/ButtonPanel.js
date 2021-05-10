@@ -5,7 +5,7 @@ import Button from './Button';
 class ButtonPanel extends React.Component {
   render() {
     return (
-      <div>
+      <div className="buton-list">
         <div>
           {' '}
           <Button number="AC" color={false} />

@@ -4,7 +4,7 @@ import ButtonPanel from './ButtonPanel';
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <div className="main-intro">
         <div className="results-card">
           <Display />
