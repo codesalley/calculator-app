@@ -9,12 +9,8 @@ class Display extends React.Component {
     const { result } = this.props;
     return (
       <div className="result-card">
-        <p className="input-res">
-          2 * 0
-        </p>
-        <p className="cal-res">
-          {result}
-        </p>
+        <p className="input-res">2 * 0</p>
+        <p className="cal-res">{result}</p>
       </div>
     );
   }

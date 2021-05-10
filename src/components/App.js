@@ -13,7 +13,6 @@ function App() {
           <ButtonPanel />
         </div>
       </div>
-
     </div>
   );
 }

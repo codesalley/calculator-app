@@ -12,8 +12,7 @@ class ButtonPanel extends React.Component {
           <Button number="AC" color="btn-dark btn" />
           <Button number="+/-" color="btn-dark btn" />
           <Button number="%" color="btn-dark btn" />
-          <Button number="÷" color="btn-yellow btn" />
-          {' '}
+          <Button number="÷" color="btn-yellow btn" />{' '}
         </div>
         <div className="btn-group">
           <Button number="7" color="btn-white btn" />
@@ -26,7 +25,6 @@ class ButtonPanel extends React.Component {
           <Button number="5" color="btn-white btn" />
           <Button number="6" color="btn-white btn" />
           <Button number="-" color="btn-yellow btn" />
-
         </div>
         <div className="btn-group">
           <Button number="1" color="btn-white btn" />
@@ -38,7 +36,6 @@ class ButtonPanel extends React.Component {
           <Button number="0" color=" zero-btn btn-last-color" />
           <Button number="." color=" last-btn btn-last-color" />
           <Button number="=" color=" last-btn btn-yellow " />
-
         </div>
       </div>
     );
