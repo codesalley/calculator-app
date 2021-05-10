@@ -2,6 +2,8 @@
 
 ### React calculator simple and advance calculator to help speed up calculations with variety of maths options, Almost any mathematical equation can be computed. 
 
+![](./ss.png)
+
 ## Getting Started
 
 To get this project up and running in your local machine, follow these simple example steps.
