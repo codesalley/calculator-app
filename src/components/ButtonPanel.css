@@ -10,7 +10,9 @@
   gap: 10px;
   justify-content: space-between;
 }
+
 .btn,
+
 .last-btn {
   width: 80px;
   height: 80px;
