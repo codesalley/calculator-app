@@ -6,9 +6,9 @@ import './Button.css';
 
 class Button extends React.Component {
   render() {
-    const { number, color } = this.props;
+    const { number, color, onclick } = this.props;
     return (
-      <button type="button" className={color}>
+      <button type="button" className={color} onClick={onclick}>
         {' '}
         {number}
         {' '}

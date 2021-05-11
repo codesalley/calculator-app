@@ -1,6 +1,6 @@
 import Big from 'big.js';
 
-const operation = (total, next, buttonName) => {
+const operate = (total, next, buttonName) => {
   const newTotal = Big(total);
   const newNext = Big(next);
   let res = 0;
@@ -25,4 +25,4 @@ const operation = (total, next, buttonName) => {
   }
 };
 
-export default operation;
+export default operate;

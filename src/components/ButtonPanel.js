@@ -2,14 +2,18 @@
 import React from 'react';
 import Button from './Button';
 import './ButtonPanel.css';
+import calculate from './logic/calculate';
 
 class ButtonPanel extends React.Component {
   render() {
+    const testbtn = () => {
+      calculate({ total: 10, next: 5 }, 'X');
+    };
     return (
       <div className="buton-list">
         <div className="btn-group">
           {' '}
-          <Button number="AC" color="btn-dark btn" />
+          <Button number="AC" color="btn-dark btn" onclick={testbtn} />
           <Button number="+/-" color="btn-dark btn" />
           <Button number="%" color="btn-dark btn" />
           <Button number="÷" color="btn-yellow btn" />
