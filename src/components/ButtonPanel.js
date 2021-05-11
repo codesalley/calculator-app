@@ -4,14 +4,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 import './ButtonPanel.css';
-import calculate from './logic/calculate';
 
 class ButtonPanel extends React.Component {
   render() {
-    // eslint-disable-next-line no-unused-vars
-    const testbtn = () => {
-      calculate({ total: 10, next: 5 }, 'X');
-    };
     const { onclick } = this.props;
     return (
       <div className="buton-list">
