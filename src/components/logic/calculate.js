@@ -7,19 +7,16 @@ const calculate = (calculateData, buttonName) => {
   const {
     total, next, operation, setNext, setTotal,
   } = calculateData;
-  console.log(total);
-  console.log(next);
+
   console.log(operation);
-  console.log(setNext);
-  console.log(setTotal);
-  console.log(buttonName);
+
   if (buttonName === 'AC') {
     setTotal(null);
     setNext(null);
     return true;
   }
   if (isValidNumber(buttonName) && total === null) {
-    if (next && next.split('')[0] === '0') {
+    if (next && next.split('')[0] === '0' && !next.split('')[1] === '.') {
       setNext(null);
       return false;
     }
@@ -33,7 +30,7 @@ const calculate = (calculateData, buttonName) => {
     return false;
   }
   if (buttonName === '.') {
-    if (next.includes('.')) {
+    if (next && next.includes('.')) {
       return false;
     }
     setNext(next ? next.concat(buttonName) : '0'.concat(buttonName));
@@ -60,6 +57,21 @@ const calculate = (calculateData, buttonName) => {
       setNext(next.concat(buttonName));
       setTotal(res.toString());
     }
+  }
+  if ('÷X-+'.includes(buttonName)) {
+    if (next && !next.includes(...['÷', 'X', '-', '+'])) {
+      setNext(next.concat(buttonName));
+    }
+  }
+  if (buttonName === '=' && next) {
+    const datatToArray = next.split('');
+    const op = datatToArray.filter((e) => ['÷', 'X', '-', '+'].includes(e));
+    const denom = next.split(op)[0];
+    const base = next.split(op)[1];
+    console.log(denom);
+    console.log(base);
+    console.log(next);
+    // const checkval = next.split(...['÷', 'X', '-', '+']);
   }
 };
 
