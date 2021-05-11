@@ -13,7 +13,6 @@ class ButtonPanel extends React.Component {
       calculate({ total: 10, next: 5 }, 'X');
     };
     const { onclick } = this.props;
-    console.log(onclick);
     return (
       <div className="buton-list">
         <div className="btn-group">
