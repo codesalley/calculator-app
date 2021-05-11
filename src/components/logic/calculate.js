@@ -1,6 +1,7 @@
 /* eslint-disable consistent-return */
 // import operate from './operate';
 import isValidNumber from './validNum';
+import toInt from './toInt';
 
 const calculate = (calculateData, buttonName) => {
   const {
@@ -18,6 +19,10 @@ const calculate = (calculateData, buttonName) => {
     return true;
   }
   if (isValidNumber(buttonName) && total === null) {
+    if (next && next.split('')[0] === '0') {
+      setNext(null);
+      return false;
+    }
     setNext(next ? next.concat(buttonName) : ''.concat(buttonName));
     return true;
   }
@@ -26,6 +31,18 @@ const calculate = (calculateData, buttonName) => {
       return false;
     }
     setNext(next ? next.concat(buttonName) : '0'.concat(buttonName));
+  }
+  if (buttonName === '+/-') {
+    if (!total) {
+      const conNum = toInt(next);
+      setNext((conNum * -1).toString());
+    }
+    if (total) {
+      const conNum = toInt(next);
+      const conTotal = toInt(total);
+      setNext((conNum * -1).toString());
+      setTotal((conTotal * -1).toString());
+    }
   }
 };
 
