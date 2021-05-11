@@ -6,22 +6,24 @@ import './Display.css';
 class Display extends React.Component {
   render() {
     // eslint-disable-next-line react/prop-types
-    const { result } = this.props;
+    const { total, next } = this.props;
     return (
       <div className="result-card">
-        <p className="input-res">2 * 0</p>
-        <p className="cal-res">{result}</p>
+        <p className="input-res">{next}</p>
+        <p className="cal-res">{total}</p>
       </div>
     );
   }
 }
 
 Display.prototypes = {
-  result: PropTypes.string,
+  total: PropTypes.string,
+  next: PropTypes.string,
 };
 
 Display.defaultProps = {
-  result: '0',
+  total: '0',
+  next: '0',
 };
 
 export default Display;

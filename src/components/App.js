@@ -3,12 +3,12 @@ import './App.css';
 import { useState } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
+import isValidNumber from './logic/validNum';
 
 function App() {
-  const [total, setTotal] = useState(null);
-  const [next, setNext] = useState(null);
+  const [total, setTotal] = useState(0);
+  const [next, setNext] = useState(0);
   const submitTo = (num) => {
-    console.log(num);
   };
   return (
     <div className="container">
