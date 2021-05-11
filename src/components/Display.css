@@ -2,13 +2,16 @@
   position: absolute;
   bottom: 2%;
   right: 1%;
+  width: 100%;
 }
 
 .cal-res {
   font-size: 70px;
   margin: 0;
+
   color: rgba(0, 0, 0, 0.87);
   font-weight: 600;
+  text-align: right;
 }
 
 .input-res {
@@ -16,4 +19,5 @@
   color: rgba(0, 0, 0, 0.493);
   font-weight: 700;
   font-size: 18px;
+  text-align: right;
 }
