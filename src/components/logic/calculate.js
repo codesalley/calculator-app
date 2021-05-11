@@ -67,6 +67,11 @@ const calculate = (calculateData, buttonName) => {
     }
   }
   if (next && ['÷', 'X', '-', '+'].includes(buttonName)) {
+    if (next.split('')[0] === '-' && !['÷', 'X', '-', '+'].includes(next.split('')[next.length - 1])) {
+      setNext(next.concat(buttonName));
+      return true;
+    }
+
     if (!findOperator(next, opSigns.join(''))) {
       setNext(next.concat(buttonName));
       return true;
