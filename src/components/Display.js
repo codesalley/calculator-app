@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Display.css';
@@ -9,8 +10,8 @@ class Display extends React.Component {
     const { total, next } = this.props;
     return (
       <div className="result-card">
-        <p className="input-res">{next}</p>
-        <p className="cal-res">{total}</p>
+        <p className="input-res">{next || '0'}</p>
+        <p className="cal-res">{total || '0'}</p>
       </div>
     );
   }

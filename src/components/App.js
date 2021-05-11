@@ -6,10 +6,14 @@ import ButtonPanel from './ButtonPanel';
 import calculate from './logic/calculate';
 
 function App() {
-  const [total, setTotal] = useState(0);
-  const [next, setNext] = useState(0);
+  const [total, setTotal] = useState(null);
+  const [next, setNext] = useState(null);
   const submitTo = (num) => {
+    calculate({
+      next, total, setNext, setTotal,
+    }, num);
   };
+
   return (
     <div className="container">
       <div className="main-intro">

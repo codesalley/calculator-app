@@ -11,13 +11,13 @@ const operate = (total, next, buttonName) => {
     case '+':
       res = newTotal.plus(next);
       return res;
-    case 'x' || 'X':
+    case 'X':
       res = newTotal.mul(newNext);
       return res;
     case '%':
       res = newTotal.mod(newNext);
       return res;
-    case '/' || '÷':
+    case '÷':
       res = newTotal.div(newNext);
       return res;
     default:
