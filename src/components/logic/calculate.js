@@ -1,5 +1,5 @@
 /* eslint-disable consistent-return */
-// import operate from './operate';
+import operate from './operate';
 import isValidNumber from './validNum';
 import toInt from './toInt';
 
@@ -26,6 +26,12 @@ const calculate = (calculateData, buttonName) => {
     setNext(next ? next.concat(buttonName) : ''.concat(buttonName));
     return true;
   }
+  if (isValidNumber(buttonName) && total) {
+    setNext(null);
+    setTotal(null);
+    setNext(''.concat(buttonName));
+    return false;
+  }
   if (buttonName === '.') {
     if (next.includes('.')) {
       return false;
@@ -33,6 +39,9 @@ const calculate = (calculateData, buttonName) => {
     setNext(next ? next.concat(buttonName) : '0'.concat(buttonName));
   }
   if (buttonName === '+/-') {
+    if (!total && !next) {
+      return false;
+    }
     if (!total) {
       const conNum = toInt(next);
       setNext((conNum * -1).toString());
@@ -42,6 +51,14 @@ const calculate = (calculateData, buttonName) => {
       const conTotal = toInt(total);
       setNext((conNum * -1).toString());
       setTotal((conTotal * -1).toString());
+    }
+  }
+
+  if (buttonName === '%') {
+    if (!total && next) {
+      const res = operate(toInt(next), 100, '/');
+      setNext(next.concat(buttonName));
+      setTotal(res.toString());
     }
   }
 };
