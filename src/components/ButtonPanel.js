@@ -33,7 +33,7 @@ class ButtonPanel extends React.Component {
           <Button number="4" color="btn-white btn" onclick={onclick} />
           <Button number="5" color="btn-white btn" onclick={onclick} />
           <Button number="6" color="btn-white btn" onclick={onclick} />
-          <Button number="-" color="btn-yellow btn" onclick={onclick} />
+          <Button number="~" color="btn-yellow btn" onclick={onclick} />
         </div>
         <div className="btn-group">
           <Button number="1" color="btn-white btn" onclick={onclick} />

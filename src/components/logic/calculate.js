@@ -2,32 +2,40 @@
 import operate from './operate';
 import isValidNumber from './validNum';
 import toInt from './toInt';
+import findOperator from './findOperator';
+import renderCheck from './renderCheck';
 
 const calculate = (calculateData, buttonName) => {
+  const opSigns = ['÷', 'X', '-', '+'];
   const {
-    total, next, operation, setNext, setTotal,
+    total, next, setNext, setTotal,
   } = calculateData;
-
-  console.log(operation);
 
   if (buttonName === 'AC') {
     setTotal(null);
     setNext(null);
     return true;
   }
-  if (isValidNumber(buttonName) && total === null) {
-    if (next && next.split('')[0] === '0' && !next.split('')[1] === '.') {
-      setNext(null);
+  if (buttonName === '0') {
+    if ((next && next.split('')[0] === '0') && next.length > 2) {
       return false;
     }
-    setNext(next ? next.concat(buttonName) : ''.concat(buttonName));
+  }
+  if (buttonName === '=' && total && next) {
+    const res = operate(toInt(total), toInt(total), '+');
+    setTotal(renderCheck(res.toString()));
     return true;
   }
+
   if (isValidNumber(buttonName) && total) {
     setNext(null);
     setTotal(null);
     setNext(''.concat(buttonName));
     return false;
+  }
+  if (isValidNumber(buttonName)) {
+    setNext(next ? next.concat(buttonName) : ''.concat(buttonName));
+    return true;
   }
   if (buttonName === '.') {
     if (next && next.includes('.')) {
@@ -47,31 +55,32 @@ const calculate = (calculateData, buttonName) => {
       const conNum = toInt(next);
       const conTotal = toInt(total);
       setNext((conNum * -1).toString());
-      setTotal((conTotal * -1).toString());
+      setTotal(renderCheck((conTotal * -1).toString()));
     }
   }
 
   if (buttonName === '%') {
     if (!total && next) {
-      const res = operate(toInt(next), 100, '/');
+      const res = operate(toInt(next), 100, '÷');
       setNext(next.concat(buttonName));
-      setTotal(res.toString());
+      setTotal(renderCheck(res.toString()));
     }
   }
-  if ('÷X-+'.includes(buttonName)) {
-    if (next && !next.includes(...['÷', 'X', '-', '+'])) {
+  if (next && ['÷', 'X', '-', '+'].includes(buttonName)) {
+    if (!findOperator(next, opSigns.join(''))) {
       setNext(next.concat(buttonName));
+      return true;
     }
   }
-  if (buttonName === '=' && next) {
+
+  if (buttonName === '=' && next && findOperator(next, opSigns.join(''))) {
     const datatToArray = next.split('');
     const op = datatToArray.filter((e) => ['÷', 'X', '-', '+'].includes(e));
     const denom = next.split(op)[0];
     const base = next.split(op)[1];
-    console.log(denom);
-    console.log(base);
-    console.log(next);
-    // const checkval = next.split(...['÷', 'X', '-', '+']);
+    const results = operate(toInt(denom), toInt(base), op.join());
+    setTotal(renderCheck(results.toString()));
+    return true;
   }
 };
 

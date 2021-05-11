@@ -10,7 +10,7 @@ class Button extends React.Component {
     return (
       <button type="button" className={color} onClick={() => onclick(number)}>
         {' '}
-        {number}
+        {number }
         {' '}
       </button>
 
