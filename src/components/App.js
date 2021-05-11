@@ -3,7 +3,6 @@ import './App.css';
 import { useState } from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
-import isValidNumber from './logic/validNum';
 import calculate from './logic/calculate';
 
 function App() {
