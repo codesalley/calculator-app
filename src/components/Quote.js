@@ -16,7 +16,7 @@ const QuotePage = () => {
       setPageData(data[rnd]);
       setLoading(false);
     } catch (error) {
-      console.log({ msg: error });
+      console.warn({ msg: 'check your internet connection' });
     }
   };
 

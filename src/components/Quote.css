@@ -14,7 +14,7 @@
   width: 400px;
   display: flex;
   flex-direction: column;
-  border: 2px double #6366F1;
+  border: 2px double #6366f1;
   border-radius: 20px;
   padding: 30px 10px;
 }
@@ -46,9 +46,9 @@
   opacity: 0.7;
   font-size: 11px;
 }
-@media screen and (max-width: 766px) {
- .quote-card {
-   width: auto;
- }
 
+@media screen and (max-width: 766px) {
+  .quote-card {
+    width: auto;
+  }
 }

@@ -15,14 +15,12 @@
 /* font-family: 'Pacifico', cursive; */
 
 @media screen and (min-width: 766px) {
-
   .home-right {
     flex: 1;
     width: 100%;
     display: grid;
     place-content: center;
   }
-
 
   .home-left {
     flex: 1;
@@ -41,8 +39,9 @@
     font-size: 55px;
     font-weight: 900;
   }
+
   .header-h2 span {
-    color: #6366F1;
+    color: #6366f1;
   }
 
   .header-p {
@@ -52,6 +51,7 @@
     opacity: 0.7;
     font-style: italic;
   }
+
   .lorem-p {
     font-size: 18px;
     font-weight: 500;
@@ -64,15 +64,18 @@
     max-width: 100%;
     overflow: hidden;
   }
+
   .intro-logo {
     max-width: 300px;
     width: 100%;
     margin: auto;
   }
+
   .main-home {
     width: 95%;
     margin: auto;
   }
+
   .home-intro {
     display: flex;
     flex-direction: column;
@@ -80,6 +83,7 @@
     gap: 20px;
     text-align: center;
   }
+
   .header-p {
     font-size: 12px;
     padding-bottom: 20px;
@@ -87,12 +91,14 @@
     opacity: 0.7;
     line-height: 15px;
   }
+
   .lorem-p {
     width: 70%;
     font-size: 12px;
     line-height: 15px;
     margin: auto;
   }
+
   .hide-sm {
     display: none;
   }

@@ -6,20 +6,18 @@
   max-width: 1220px;
   width: 90%;
   margin: auto;
-  background-color: #6366F1;
+  background-color: #6366f1;
 }
 
 .main-nav {
-  background-color: #6366F1;
+  background-color: #6366f1;
   width: 100%;
 }
 
 .nav-right {
   display: flex;
   gap: 10px;
-
 }
-
 
 .nav-left h1 {
   font-family: 'Pacifico', cursive;
@@ -48,17 +46,12 @@ a {
   }
 
   50% {
-    transform: rotate3d(360deg);
     transform: translateY(-50%);
-
   }
 
   100% {
-    transform: rotate(0deg);
     transform: translateY(0%);
-
   }
-
 }
 
 @media screen and (max-width: 766px) {
