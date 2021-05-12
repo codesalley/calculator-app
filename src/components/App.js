@@ -6,7 +6,7 @@ import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import calculate from './logic/calculate';
 import HomePage from './Home';
-import QuotePage from './Qoute';
+import QuotePage from './Quote';
 import NavBar from './NavBar';
 
 function App() {

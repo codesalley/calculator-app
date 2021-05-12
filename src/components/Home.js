@@ -14,7 +14,7 @@ const HomePage = () => (
         </h2>
         <p className="header-p">Everything can be represented with numbers</p>
       </div>
-      <p className="lorem-p">
+      <p className="lorem-p hide-sm">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
         ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
         laboris nisi ut aliquip ex ea commodo consequat.

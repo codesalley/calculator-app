@@ -56,3 +56,34 @@
     font-weight: 500;
   }
 }
+
+@media screen and (max-width: 766px) {
+  .main {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .main-home {
+    width: 95%;
+    margin: auto;
+  }
+  .home-intro {
+    display: flex;
+    flex-direction: column;
+  }
+  .header-p {
+    font-size: 12px;
+    padding-bottom: 20px;
+    font-family: 'Pacifico', cursive;
+    opacity: 0.7;
+    line-height: 15px;
+  }
+  .lorem-p {
+    width: 70%;
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .hide-sm {
+    display: none;
+  }
+}
