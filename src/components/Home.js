@@ -10,7 +10,7 @@ const HomePage = () => (
           {' '}
           <span>Math</span>
           {' '}
-          univerce!
+          universe!
         </h2>
         <p className="header-p">Everything can be represented with numbers</p>
       </div>
