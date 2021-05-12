@@ -19,29 +19,32 @@ function App() {
   };
 
   return (
-    <div className="main-home">
 
+    <div className="main">
       <Router>
         <NavBar />
-        <Route exact path="/">
-          <HomePage />
-        </Route>
-        <Route path="/quotes">
-          <QuotePage />
-        </Route>
-        <Route path="/calculator">
-          <div className="container">
-            <div className="main-intro">
-              <div className="results-card">
-                <Display total={total} next={next} />
-              </div>
-              <div className="buttons-field">
-                <ButtonPanel onclick={submitTo} />
+        <div className="main-home">
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+          <Route path="/quotes">
+            <QuotePage />
+          </Route>
+          <Route path="/calculator">
+            <div className="container">
+              <div className="main-intro">
+                <div className="results-card">
+                  <Display total={total} next={next} />
+                </div>
+                <div className="buttons-field">
+                  <ButtonPanel onclick={submitTo} />
+                </div>
               </div>
             </div>
-          </div>
-        </Route>
+          </Route>
+        </div>
       </Router>
+
     </div>
   );
 }
