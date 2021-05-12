@@ -1,6 +1,6 @@
 const getRandomeInt = (n) => {
   const res = Math.floor(Math.random() * n);
-  return res;
+  return res + 1;
 };
 
 export default getRandomeInt;
