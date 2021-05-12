@@ -2,7 +2,7 @@
 
 ### React calculator simple and advance calculator to help speed up calculations with variety of maths options, Almost any mathematical equation can be computed. 
 
-![](./ss.png)
+![](./ss.gif)
 
 ## Getting Started
 
