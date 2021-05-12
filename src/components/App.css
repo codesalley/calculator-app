@@ -64,12 +64,17 @@
     flex-direction: column;
   }
 
+  .results-card {
+    height: 100%;
+  }
+
   .calculator-intro p {
     display: none;
   }
   .calculator-intro h2 {
     font-size: 18px;
     margin: 0;
+    text-align: center;
   }
   .calculator-intro {
     margin: 0;

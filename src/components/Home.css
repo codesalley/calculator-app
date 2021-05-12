@@ -23,6 +23,7 @@
     place-content: center;
   }
 
+
   .home-left {
     flex: 1;
     width: 100%;
@@ -63,6 +64,11 @@
     max-width: 100%;
     overflow: hidden;
   }
+  .intro-logo {
+    max-width: 300px;
+    width: 100%;
+    margin: auto;
+  }
   .main-home {
     width: 95%;
     margin: auto;
@@ -70,6 +76,9 @@
   .home-intro {
     display: flex;
     flex-direction: column;
+    height: auto;
+    gap: 20px;
+    text-align: center;
   }
   .header-p {
     font-size: 12px;
@@ -82,6 +91,7 @@
     width: 70%;
     font-size: 12px;
     line-height: 15px;
+    margin: auto;
   }
   .hide-sm {
     display: none;
