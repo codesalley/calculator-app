@@ -5,11 +5,18 @@
   place-content: center;
 }
 
+.loading-img {
+  height: 150px;
+}
+
 .quote-card {
   max-width: 500px;
   width: 400px;
   display: flex;
   flex-direction: column;
+  border: 2px double #6366F1;
+  border-radius: 20px;
+  padding: 30px 10px;
 }
 
 .quote-h2 {
