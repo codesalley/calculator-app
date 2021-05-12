@@ -1,0 +1,24 @@
+.home-intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: calc(100vh - 70px);
+}
+
+.intro-logo {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    max-width: 600px;
+}
+
+.home-right {
+    flex: 1;
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.home-left {
+    flex: 1;
+    width: 100%;
+}

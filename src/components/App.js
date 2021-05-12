@@ -7,6 +7,7 @@ import ButtonPanel from './ButtonPanel';
 import calculate from './logic/calculate';
 import HomePage from './Home';
 import QuotePage from './Qoute';
+import NavBar from './NavBar';
 
 function App() {
   const [total, setTotal] = useState(null);
@@ -18,27 +19,30 @@ function App() {
   };
 
   return (
+    <div className="main-home">
 
-    <Router>
-      <Route exact path="/">
-        <HomePage />
-      </Route>
-      <Route path="/quotes">
-        <QuotePage />
-      </Route>
-      <Route path="/calculator">
-        <div className="container">
-          <div className="main-intro">
-            <div className="results-card">
-              <Display total={total} next={next} />
-            </div>
-            <div className="buttons-field">
-              <ButtonPanel onclick={submitTo} />
+      <Router>
+        <NavBar />
+        <Route exact path="/">
+          <HomePage />
+        </Route>
+        <Route path="/quotes">
+          <QuotePage />
+        </Route>
+        <Route path="/calculator">
+          <div className="container">
+            <div className="main-intro">
+              <div className="results-card">
+                <Display total={total} next={next} />
+              </div>
+              <div className="buttons-field">
+                <ButtonPanel onclick={submitTo} />
+              </div>
             </div>
           </div>
-        </div>
-      </Route>
-    </Router>
+        </Route>
+      </Router>
+    </div>
   );
 }
 
