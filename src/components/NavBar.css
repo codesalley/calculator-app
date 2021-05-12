@@ -45,10 +45,11 @@ a {
 
 @keyframes jump {
   0% {
-    transform: translateY(-50%);
+    transform: translateY(-20%);
   }
   50% {
     transform: rotate3d(360deg);
+    transform: translateY(-50%);
     
   }
   100% {
